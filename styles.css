@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Dosis", sans-serif;
     font-size: 16px;
 }
@@ -22,8 +23,10 @@ form {
     margin-bottom: 15px;
 }
 
-.mainCard {
-    width: 40vw;
+/* ---------- TITLE ---------- */
+
+.main-container {
+    width: 90%;
     border-radius: 25px;
     background-color: #fff;
     padding: 25px;
@@ -34,72 +37,104 @@ form {
     display: flex;
     justify-content: center;
     align-content: center;
+    font-size: 2rem;
+    gap: 1rem;
     margin-bottom: 15px;
 }
-
-.inputForm {
-    border: none;
-    padding: 10px;
-    border: 1px solid #eee;
-    outline: none;
-    width: 65%;
+.title img {
+    width: 2rem;
 }
 
-.inputForm::placeholder {
+/* ---------- INPUT ---------- */
+
+.input-form {
+    width: 100%;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.input-task {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    outline: none;
+}
+.input-task::placeholder {
     padding: 0px;
 }
 
-.btnCreate {
+.input-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     padding: 10px 15px;
+
     background-image: linear-gradient(109.6deg, rgba(62, 161, 219, 1) 11.2%, rgba(93, 52, 236, 1) 100.2%);
-    border: none;
     color: #fff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.cardsList {
+/* ---------- TASKS ---------- */
+
+.tasks-list {
     width: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
     overflow-y: scroll;
     max-height: 60vh;
     height: 60vh;
 }
 
-.card {
-    width: 90%;
+.task-card {
+    width: 100%;
     padding: 15px;
     box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+    
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-content: center;
-    margin: 5px 0px;
-    position: relative;
+    align-content: flex-start;
+    gap: 10px;
 }
 
-.task {
-    padding: 10px;
+.task-name {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 20px;
 }
 
-.icon {
+.task-btn {
+    height: fit-content;
+    border: none;
+    background: none;
     cursor: pointer;
 }
-
-.icon:hover {
+.task-done-btn:hover {
+    color: rgba(62, 161, 219, 1);
+}
+.task-done-done {
     color: rgba(62, 161, 219, 1);
 }
 
-.completeIcon {
-    color: rgba(62, 161, 219, 1);
-}
-
-.trashIcon:hover {
+.task-trash-btn:hover {
     color: #f00;
 }
+
+/* ---------- DELETE ---------- */
 
 .deleteConfirmationPop {
     position: relative;
@@ -116,4 +151,10 @@ form {
 
 .noTasks {
     font-size: 48px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        width: 40%;
+    }
 }
