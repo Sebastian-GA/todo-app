@@ -87,8 +87,8 @@ form {
     width: 100%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px;
 
