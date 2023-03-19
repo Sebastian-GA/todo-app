@@ -129,8 +129,14 @@ form {
 .task-done-btn:hover {
     color: rgba(62, 161, 219, 1);
 }
-.task-done-done {
+/* TASK DONE */
+.task-done .task-done-btn {
     color: rgba(62, 161, 219, 1);
+}
+.task-done .task-name {
+    text-decoration: line-through;
+    font-style: italic;
+    color: grey;
 }
 
 .task-trash-btn:hover {
