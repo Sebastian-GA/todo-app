@@ -17,18 +17,18 @@
                 <h1 class="title">TODO App <img src="assets/rocket.svg" /></h1>
                 <div>
                     <form action="" class="input-form">
-                        <input type="text" class="input-task" name="task" placeholder="Task name" autocomplete="off" />
-                        <button type="submit" class="input-btn">Agregar <i class="fas fa-plus-circle"></i></button>
+                        <input type="text" class="input-task" name="task" placeholder="Task name" autocomplete="off" data-form-input/>
+                        <button type="submit" class="input-btn" data-form-btn>Agregar <i class="fas fa-plus-circle"></i></button>
                     </form>
                 </div>
 
-                <ul class="tasks-list">
-                    <li class="task-card">
+                <ul class="tasks-list" data-tasks-list>
+                    <li class="task-card" data-task>
                         <button class="task-btn task-done-btn"><i class="far fa-check-square"></i></button>
                         <span class="task-name">Hacer curso de DOM</span>
                         <button class="task-btn task-trash-btn"><i class="fas fa-trash-alt"></i></button>
                     </li>
-                    <li class="task-card">
+                    <li class="task-card" data-task>
                         <button class="task-btn task-done-btn"><i class="far fa-check-square"></i></button>
                         <span class="task-name">Hacer curso de Excel</span>
                         <button class="task-btn task-trash-btn"><i class="fas fa-trash-alt"></i></button>

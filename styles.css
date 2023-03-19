@@ -91,7 +91,7 @@ form {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    
+
     overflow-y: scroll;
     max-height: 60vh;
     height: 60vh;
@@ -101,7 +101,8 @@ form {
     width: 100%;
     padding: 15px;
     box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
-    
+    border-radius: 5px;
+
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
@@ -115,6 +116,8 @@ form {
     font-weight: 500;
     color: #333;
     line-height: 20px;
+    
+    word-break: break-all;
 }
 
 .task-btn {
