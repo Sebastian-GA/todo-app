@@ -17,7 +17,7 @@ const createTask = (event) => {
     checkbox.setAttribute("data-task-done-btn", "");
     checkbox.innerHTML = `<i class="far fa-check-square"></i>`;
     checkbox.addEventListener("click", () => {
-        task.classList.toggle("task-done");  // toggle done status
+        task.classList.toggle("task-done"); // toggle done status
     });
     task.appendChild(checkbox);
     // create task name
@@ -32,7 +32,7 @@ const createTask = (event) => {
     trashBtn.setAttribute("data-task-trash-btn", "");
     trashBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     trashBtn.addEventListener("click", () => {
-        task.remove();  // remove the task
+        task.remove(); // remove the task
     });
     task.appendChild(trashBtn);
 
