@@ -15,6 +15,7 @@ const createTask = (event) => {
     const checkbox = document.createElement("button");
     checkbox.classList.add("task-btn", "task-done-btn");
     checkbox.setAttribute("data-task-done-btn", "");
+    checkbox.setAttribute("title", "Mark as done");
     checkbox.innerHTML = `<i class="far fa-check-square"></i>`;
     checkbox.addEventListener("click", () => {
         task.classList.toggle("task-done"); // toggle done status
@@ -30,13 +31,14 @@ const createTask = (event) => {
     const trashBtn = document.createElement("button");
     trashBtn.classList.add("task-btn", "task-trash-btn");
     trashBtn.setAttribute("data-task-trash-btn", "");
+    trashBtn.setAttribute("title", "Delete task");
     trashBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     trashBtn.addEventListener("click", () => {
         task.remove(); // remove the task
     });
     task.appendChild(trashBtn);
 
-    document.querySelector("[data-tasks-list]").appendChild(task);
+    document.querySelector("[data-tasks-list]").prepend(task);
 };
 
 addBtn.addEventListener("click", createTask);

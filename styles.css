@@ -87,8 +87,8 @@ form {
     width: 100%;
     padding: 10px;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
 
@@ -100,7 +100,7 @@ form {
 .task-card {
     width: 100%;
     padding: 15px;
-    box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+    box-shadow: 2px 2px 2px 2px rgba(71, 71, 71, 0.16);
     border-radius: 5px;
 
     display: flex;
@@ -116,12 +116,12 @@ form {
     font-weight: 500;
     color: #333;
     line-height: 20px;
-    
+
     word-break: break-all;
 }
 
 .task-btn {
-    height: fit-content;
+    height: min-content;
     border: none;
     background: none;
     cursor: pointer;
